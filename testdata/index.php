@@ -24,7 +24,7 @@ use XoopsModules\Wgfaker\{
     Utility
 };
 
-require_once dirname(__DIR__, 3) . '/include/cp_header.php';
+require_once \dirname(__DIR__, 3) . '/include/cp_header.php';
 require \dirname(__DIR__) . '/preloads/autoloader.php';
 
 $op = \Xmf\Request::getCmd('op');
@@ -45,7 +45,7 @@ switch ($op) {
             loadSampleData();
         } else {
             xoops_cp_header();
-            xoops_confirm(['ok' => 1, 'op' => 'load'], 'index.php', \sprintf(\constant('CO_' . $moduleDirNameUpper . '_' . 'ADD_SAMPLEDATA_OK')), \constant('CO_' . $moduleDirNameUpper . '_' . 'CONFIRM'));
+            xoops_confirm(['ok' => 1, 'op' => 'load'], 'index.php', \constant('CO_' . $moduleDirNameUpper . '_' . 'ADD_SAMPLEDATA_OK'), \constant('CO_' . $moduleDirNameUpper . '_' . 'CONFIRM'));
             xoops_cp_footer();
         }
         break;
@@ -168,7 +168,6 @@ function exportSchema(): void
  */
 function loadTableFromArrayWithReplace($table, $data, $search, $replace)
 {
-    /** @var \XoopsDatabase $db */
     $db            = \XoopsDatabaseFactory::getDatabaseConnection();
     $prefixedTable = $db->prefix($table);
     $count         = 0;

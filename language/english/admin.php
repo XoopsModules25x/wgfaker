@@ -40,7 +40,6 @@ require_once __DIR__ . '/common.php';
 \define('_AM_WGFAKER_FORM_OK', 'Successfully saved');
 \define('_AM_WGFAKER_FORM_DELETE_OK', 'Successfully deleted');
 \define('_AM_WGFAKER_FORM_SURE_DELETE', "Are you sure to delete: <b><span style='color : Red;'>%s </span></b>");
-\define('_AM_WGFAKER_FORM_SURE_RENEW', "Are you sure to update: <b><span style='color : Red;'>%s </span></b>");
 // Buttons
 \define('_AM_WGFAKER_ADD_FIELD', 'Add New Field');
 \define('_AM_WGFAKER_ADD_DATATYPE', 'Add New Datatype');
@@ -92,20 +91,8 @@ require_once __DIR__ . '/common.php';
 \define('_AM_WGFAKER_TABLE_DATECREATED', 'Datecreated');
 \define('_AM_WGFAKER_TABLE_SUBMITTER', 'Submitter');
 // General
-\define('_AM_WGFAKER_FORM_UPLOAD', 'Upload file');
-\define('_AM_WGFAKER_FORM_UPLOAD_NEW', 'Upload new file: ');
-\define('_AM_WGFAKER_FORM_UPLOAD_SIZE', 'Max file size: ');
-\define('_AM_WGFAKER_FORM_UPLOAD_SIZE_MB', 'MB');
-\define('_AM_WGFAKER_FORM_UPLOAD_IMG_WIDTH', 'Max image width: ');
-\define('_AM_WGFAKER_FORM_UPLOAD_IMG_HEIGHT', 'Max image height: ');
-\define('_AM_WGFAKER_FORM_IMAGE_PATH', 'Files in %s :');
 \define('_AM_WGFAKER_FORM_ACTION', 'Action');
-\define('_AM_WGFAKER_FORM_EDIT', 'Modification');
 \define('_AM_WGFAKER_FORM_DELETE', 'Clear');
-// Sample List Values
-\define('_AM_WGFAKER_LIST_1', 'Sample List Value 1');
-\define('_AM_WGFAKER_LIST_2', 'Sample List Value 2');
-\define('_AM_WGFAKER_LIST_3', 'Sample List Value 3');
 // Clone feature
 \define('_AM_WGFAKER_CLONE', 'Clone');
 \define('_AM_WGFAKER_CLONE_DSC', 'Cloning a module has never been this easy! Just type in the name you want for it and hit submit button!');
@@ -119,7 +106,6 @@ require_once __DIR__ . '/common.php';
 \define('_AM_WGFAKER_CLONE_FAIL', 'Sorry, we failed in creating the new clone. Maybe you need to temporally set write permissions (CHMOD 777) to modules folder and try again.');
 // ---------------- Admin Others ----------------
 \define('_AM_WGFAKER_ABOUT_MAKE_DONATION', 'Submit');
-\define('_AM_WGFAKER_SUPPORT_FORUM', 'Support Forum');
 \define('_AM_WGFAKER_DONATION_AMOUNT', 'Donation Amount');
 \define('_AM_WGFAKER_MAINTAINEDBY', ' is maintained by ');
 // ---------------- End ----------------

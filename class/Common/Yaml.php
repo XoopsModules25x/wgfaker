@@ -90,7 +90,7 @@ class Yaml
 
         // read lines
         $i = 0;
-        foreach ($lines as $key => $value) {
+        foreach ($lines as $value) {
             $line = \trim($value);
             // remove blank lines
             if ('-' === $line) {

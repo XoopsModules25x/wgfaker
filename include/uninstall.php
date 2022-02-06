@@ -47,8 +47,8 @@ function xoops_module_uninstall_wgfaker(\XoopsModule $module)
     if ($dirInfo->isDir()) {
         // The directory exists so rename it
         $date = date('Y-m-d');
-        if (!rename($uploadDirectory, $uploadDirectory . "_bak_$date")) {
-            $module->setErrors(sprintf(constant('CO_' . $moduleDirNameUpper . '_ERROR_BAD_DEL_PATH'), $uploadDirectory));
+        if (!\rename($uploadDirectory, $uploadDirectory . "_bak_$date")) {
+            $module->setErrors(\sprintf(\constant('CO_' . $moduleDirNameUpper . '_ERROR_BAD_DEL_PATH'), $uploadDirectory));
             $success = false;
         }
     }
@@ -59,7 +59,7 @@ function xoops_module_uninstall_wgfaker(\XoopsModule $module)
     // Remove xsitemap.xml from XOOPS root folder if it exists
     //------------------------------------------------------------------
     $xmlfile = $GLOBALS['xoops']->path('xsitemap.xml');
-    if (is_file($xmlfile)) {
+    if (\is_file($xmlfile)) {
         if (false === ($delOk = \unlink($xmlfile))) {
             $module->setErrors(\sprintf(\_AM_WGFAKER_ERROR_BAD_REMOVE, $xmlfile));
         }

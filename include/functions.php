@@ -99,7 +99,6 @@ function wgfaker_RewriteUrl($module, $array, $type = 'content')
             $rewrite_base = '/modules/';
             $page = 'page=' . $array['content_alias'];
             return \XOOPS_URL . $rewrite_base . $module . '/' . $type . '.php?' . $topic_name . 'id=' . $id . '&amp;' . $page . $comment;
-            break;
 
         case 'rewrite':
             if($topic_name) {
@@ -122,9 +121,8 @@ function wgfaker_RewriteUrl($module, $array, $type = 'content')
             }
 
             return \XOOPS_URL . $rewrite_base . $module_name . $type . $topic_name  . $id . $page . $rewrite_ext;
-            break;
 
-         case 'short':
+        case 'short':
             if($topic_name) {
                 $topic_name .= '/';
             }
@@ -144,7 +142,6 @@ function wgfaker_RewriteUrl($module, $array, $type = 'content')
             }
 
             return \XOOPS_URL . $rewrite_base . $module_name . $type . $topic_name . $page . $rewrite_ext;
-            break;
     }
     return null;
 }

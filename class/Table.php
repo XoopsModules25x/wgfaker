@@ -80,8 +80,7 @@ class Table extends \XoopsObject
      */
     public function getNewInsertedIdTable()
     {
-        $newInsertedId = $GLOBALS['xoopsDB']->getInsertId();
-        return $newInsertedId;
+        return $GLOBALS['xoopsDB']->getInsertId();
     }
 
     /**
@@ -91,13 +90,11 @@ class Table extends \XoopsObject
      */
     public function getFormTable($action = false)
     {
-        $helper = \XoopsModules\Wgfaker\Helper::getInstance();
         if (!$action) {
             $action = $_SERVER['REQUEST_URI'];
         }
-        $isAdmin = \is_object($GLOBALS['xoopsUser']) ? $GLOBALS['xoopsUser']->isAdmin($GLOBALS['xoopsModule']->mid()) : false;
         // Title
-        $title = $this->isNew() ? \sprintf(\_AM_WGFAKER_TABLE_ADD) : \sprintf(\_AM_WGFAKER_TABLE_EDIT);
+        $title = $this->isNew() ? \_AM_WGFAKER_TABLE_ADD : \_AM_WGFAKER_TABLE_EDIT;
         // Get Theme Form
         \xoops_load('XoopsFormLoader');
         $form = new \XoopsThemeForm($title, 'form', $action, 'post', true);

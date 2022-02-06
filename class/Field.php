@@ -86,8 +86,7 @@ class Field extends \XoopsObject
      */
     public function getNewInsertedIdField()
     {
-        $newInsertedId = $GLOBALS['xoopsDB']->getInsertId();
-        return $newInsertedId;
+        return $GLOBALS['xoopsDB']->getInsertId();
     }
 
     /**
@@ -101,9 +100,8 @@ class Field extends \XoopsObject
         if (!$action) {
             $action = $_SERVER['REQUEST_URI'];
         }
-        $isAdmin = \is_object($GLOBALS['xoopsUser']) ? $GLOBALS['xoopsUser']->isAdmin($GLOBALS['xoopsModule']->mid()) : false;
         // Title
-        $title = $this->isNew() ? \sprintf(\_AM_WGFAKER_FIELD_ADD) : \sprintf(\_AM_WGFAKER_FIELD_EDIT);
+        $title = $this->isNew() ? \_AM_WGFAKER_FIELD_ADD : \_AM_WGFAKER_FIELD_EDIT;
         // Get Theme Form
         \xoops_load('XoopsFormLoader');
         $form = new \XoopsThemeForm($title, 'form', $action, 'post', true);
@@ -116,8 +114,6 @@ class Field extends \XoopsObject
         $form->addElement($TableidSelect);
         // Form Text Name
         $form->addElement(new \XoopsFormText(\_AM_WGFAKER_FIELD_NAME, 'name', 50, 255, $this->getVar('name')));
-        // Field Handler
-        $fieldHandler = $helper->getHandler('Field');
         // Form Select type
         $form->addElement(new \XoopsFormText(\_AM_WGFAKER_FIELD_TYPE, 'type', 50, 255, $this->getVar('type')));
         // Field Handler
