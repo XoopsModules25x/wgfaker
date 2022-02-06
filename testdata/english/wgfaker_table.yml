@@ -1,0 +1,88 @@
+-
+    id: '1'
+    mid: '12'
+    module: wgEvents
+    name: wgevents_event
+    skip: '0'
+    datecreated: '1644139587'
+    submitter: '1'
+-
+    id: '2'
+    mid: '12'
+    module: wgEvents
+    name: wgevents_category
+    skip: '0'
+    datecreated: '1644139588'
+    submitter: '1'
+-
+    id: '3'
+    mid: '12'
+    module: wgEvents
+    name: wgevents_registration
+    skip: '0'
+    datecreated: '1644139588'
+    submitter: '1'
+-
+    id: '4'
+    mid: '12'
+    module: wgEvents
+    name: wgevents_registration_hist
+    skip: '0'
+    datecreated: '1644139588'
+    submitter: '1'
+-
+    id: '5'
+    mid: '12'
+    module: wgEvents
+    name: wgevents_question
+    skip: '0'
+    datecreated: '1644139588'
+    submitter: '1'
+-
+    id: '6'
+    mid: '12'
+    module: wgEvents
+    name: wgevents_answer
+    skip: '0'
+    datecreated: '1644139588'
+    submitter: '1'
+-
+    id: '7'
+    mid: '12'
+    module: wgEvents
+    name: wgevents_answer_hist
+    skip: '0'
+    datecreated: '1644139588'
+    submitter: '1'
+-
+    id: '8'
+    mid: '12'
+    module: wgEvents
+    name: wgevents_textblock
+    skip: '0'
+    datecreated: '1644139588'
+    submitter: '1'
+-
+    id: '9'
+    mid: '12'
+    module: wgEvents
+    name: wgevents_field
+    skip: '0'
+    datecreated: '1644139588'
+    submitter: '1'
+-
+    id: '10'
+    mid: '12'
+    module: wgEvents
+    name: wgevents_log
+    skip: '0'
+    datecreated: '1644139588'
+    submitter: '1'
+-
+    id: '11'
+    mid: '12'
+    module: wgEvents
+    name: wgevents_account
+    skip: '0'
+    datecreated: '1644139588'
+    submitter: '1'
