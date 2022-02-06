@@ -1,0 +1,84 @@
+wgfaker_table:
+    options: 'ENGINE=InnoDB'
+    columns: 
+        -
+            name: id
+            attributes: ' INT(8) UNSIGNED NOT NULL AUTO_INCREMENT '
+        -
+            name: mid
+            attributes: ' INT(10) NOT NULL DEFAULT ''0'' '
+        -
+            name: module
+            attributes: ' VARCHAR(255) NOT NULL DEFAULT '''''''' '
+        -
+            name: name
+            attributes: ' VARCHAR(255) NOT NULL DEFAULT '''''''' '
+        -
+            name: skip
+            attributes: ' INT(1) NOT NULL DEFAULT ''0'' '
+        -
+            name: datecreated
+            attributes: ' INT(11) NOT NULL DEFAULT ''0'' '
+        -
+            name: submitter
+            attributes: ' INT(10) NOT NULL DEFAULT ''0'' '
+    keys:
+        PRIMARY:
+            columns: id
+            unique: true
+wgfaker_field:
+    options: 'ENGINE=InnoDB'
+    columns: 
+        -
+            name: id
+            attributes: ' INT(8) UNSIGNED NOT NULL AUTO_INCREMENT '
+        -
+            name: mid
+            attributes: ' INT(10) NOT NULL DEFAULT ''0'' '
+        -
+            name: tableid
+            attributes: ' INT(10) NOT NULL DEFAULT ''0'' '
+        -
+            name: name
+            attributes: ' VARCHAR(255) NOT NULL DEFAULT '''''''' '
+        -
+            name: type
+            attributes: ' VARCHAR(255) NOT NULL DEFAULT '''''''' '
+        -
+            name: datatypeid
+            attributes: ' INT(10) NOT NULL DEFAULT ''0'' '
+        -
+            name: datecreated
+            attributes: ' INT(11) NOT NULL DEFAULT ''0'' '
+        -
+            name: submitter
+            attributes: ' INT(10) NOT NULL DEFAULT ''0'' '
+    keys:
+        PRIMARY:
+            columns: id
+            unique: true
+wgfaker_datatype:
+    options: 'ENGINE=InnoDB'
+    columns: 
+        -
+            name: id
+            attributes: ' INT(8) UNSIGNED NOT NULL AUTO_INCREMENT '
+        -
+            name: name
+            attributes: ' VARCHAR(255) NOT NULL DEFAULT '''''''' '
+        -
+            name: values
+            attributes: ' TEXT NOT NULL  '
+        -
+            name: weight
+            attributes: ' INT(10) NOT NULL DEFAULT ''0'' '
+        -
+            name: datecreated
+            attributes: ' INT(11) NOT NULL DEFAULT ''0'' '
+        -
+            name: submitter
+            attributes: ' INT(10) NOT NULL DEFAULT ''0'' '
+    keys:
+        PRIMARY:
+            columns: id
+            unique: true
