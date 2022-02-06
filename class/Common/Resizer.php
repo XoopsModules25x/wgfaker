@@ -49,7 +49,7 @@ class Resizer
             case 'image/jpeg':
                 $img = \imagecreatefromjpeg($this->sourceFile);
                 if (!$img) {
-                    $img = \imagecreatefromstring(file_get_contents($this->sourceFile));
+                    $img = \imagecreatefromstring(\file_get_contents($this->sourceFile));
                 }
                 break;
             case 'image/gif':

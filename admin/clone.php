@@ -74,7 +74,7 @@ switch ($op) {
         // file, read it
         $content = \file_get_contents($dirClone . '/language/english/modinfo.php');
         $content = \str_replace('Wgfaker', \mb_strtolower($clone), $content);
-        file_put_contents($dirClone . '/language/english/modinfo.php', $content);
+        \file_put_contents($dirClone . '/language/english/modinfo.php', $content);
 
         $msg = '';
         if (\is_dir($GLOBALS['xoops']->path('modules/' . \mb_strtolower($clone)))) {

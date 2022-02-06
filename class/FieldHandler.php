@@ -197,7 +197,7 @@ class FieldHandler extends \XoopsPersistableObjectHandler
         $crTable = new \CriteriaCompo();
         $crTable->add(new \Criteria('mid', $mid));
         if ($tableHandler->getCount($crTable) > 0) {
-            $tableSelect = new \XoopsFormSelect(\_AM_WGFAKER_SELECT_MODULE, 'tableid', $tableid, 5);
+            $tableSelect = new \XoopsFormSelect(\_AM_WGFAKER_SELECT_TABLE, 'tableid', $tableid, 5);
             $tableSelect->addOption('');
             $tableAll = $tableHandler->getAll($crTable);
             foreach (\array_keys($tableAll) as $t) {

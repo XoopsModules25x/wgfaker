@@ -132,7 +132,6 @@ class TableHandler extends \XoopsPersistableObjectHandler
      */
     public function getFormSelect($mid)
     {
-        $helper = \XoopsModules\Wgfaker\Helper::getInstance();
         $action = $_SERVER['REQUEST_URI'];
 
         // Get Theme Form
@@ -162,7 +161,7 @@ class TableHandler extends \XoopsPersistableObjectHandler
      */
     public function tableExists($table)
     {
-        $table = trim($table);
+        $table = \trim($table);
         $ret   = false;
         if ($table != '') {
             $this->db->connect();

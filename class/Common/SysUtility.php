@@ -137,7 +137,7 @@ class SysUtility
             if (\mb_strlen($text) <= $length) {
                 return $text;
             }
-            $truncate = \mb_substr($text, 0, $length - mb_strlen($ending));
+            $truncate = \mb_substr($text, 0, $length - \mb_strlen($ending));
         }
         // if the words shouldn't be cut in the middle...
         if (!$exact) {

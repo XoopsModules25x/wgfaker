@@ -57,7 +57,6 @@ class Generator
 
     /**
      * Render test data
-     * @param int $type
      * @return mixed
      */
     public function renderer() {
