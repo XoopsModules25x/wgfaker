@@ -57,13 +57,13 @@ class DatatypeHandler extends \XoopsPersistableObjectHandler
     /**
      * retrieve a field
      *
-     * @param int $i field id
+     * @param int $id field id
      * @param null fields
      * @return \XoopsObject|null reference to the {@link Get} object
      */
-    public function get($i = null, $fields = null)
+    public function get($id = null, $fields = null)
     {
-        return parent::get($i, $fields);
+        return parent::get($id, $fields);
     }
 
     /**
@@ -151,7 +151,13 @@ class DatatypeHandler extends \XoopsPersistableObjectHandler
             if (\in_array($type, ['blob', 'text', 'mediumblob', 'mediumtext', 'longblob', 'longtext', 'enum', 'set'])) {
                 $ret = Constants::DATATYPE_LOREMIPSUM;
             } elseif (\in_array($type, ['char', 'varchar'])) {
-                $ret = Constants::DATATYPE_TEXT;
+                if (\mb_strpos($field, 'file') > 0) {
+                    $ret = Constants::DATATYPE_FILE;
+                } elseif (\strpos($field, 'image') > 0 || \strpos($field, 'photo') > 0) {
+                    $ret = Constants::DATATYPE_IMAGE;
+                } else {
+                    $ret = Constants::DATATYPE_TEXT;
+                }
             } elseif (\in_array($type, ['int', 'integer', 'tinyint', 'smallint', 'mediumint', 'bigint'])) {
                 $ret = Constants::DATATYPE_INTEGER;
             } elseif (\in_array($type, ['float', 'double', 'real'])) {
@@ -163,8 +169,8 @@ class DatatypeHandler extends \XoopsPersistableObjectHandler
             if (Constants::DATATYPE_INTEGER == $ret && $i > 1 && \mb_strpos($field, 'date') > 0) {
                 $ret = Constants::DATATYPE_DATE;
             }
-            if (Constants::DATATYPE_INTEGER == $ret && $i > 1 && \mb_strpos($field, 'uid') > 0) {
-                $ret = Constants::DATATYPE_DATE;
+            if (Constants::DATATYPE_INTEGER == $ret && $i > 1 && (\mb_strpos($field, 'uid') > 0 || \mb_strpos($field, 'submitter') > 0)) {
+                $ret = Constants::DATATYPE_UID;
             }
         }
         return $ret;
@@ -180,28 +186,40 @@ class DatatypeHandler extends \XoopsPersistableObjectHandler
         $datatypeHandler = $helper->getHandler('Datatype');
 
         $datatypes = [
-            [Constants::DATATYPE_AUTOINCREMENT, 'AUTOINCREMENT', '{Id for table}'],
-            [Constants::DATATYPE_INTEGER, 'INTEGER', '{Random Integer}'],
-            [Constants::DATATYPE_FLOAT, 'FLOAT', '{Random Float}'],
-            [Constants::DATATYPE_TEXT, 'TEXT', '{Random Text}'],
-            [Constants::DATATYPE_YESNO, 'YES_NO', '{Random 0 or 1}'],
+            [Constants::DATATYPE_AUTOINCREMENT, 'AUTOINCREMENT', \_AM_WGFAKER_DATATYPE_AUTOINCREMENT],
+            [Constants::DATATYPE_INTEGER, 'INTEGER', \_AM_WGFAKER_DATATYPE_INTEGER],
+            [Constants::DATATYPE_FLOAT, 'FLOAT', \_AM_WGFAKER_DATATYPE_FLOAT],
+            [Constants::DATATYPE_INT_FIXED, 'INT_FIXED', \_AM_WGFAKER_DATATYPE_INT_FIXED],
+            [Constants::DATATYPE_INT_RANGE, 'INT_RANGE', \_AM_WGFAKER_DATATYPE_INT_RANGE],
+            [Constants::DATATYPE_INT_RUNNING, 'INT_RUNNING', \_AM_WGFAKER_DATATYPE_INT_RUNNING],
+            [Constants::DATATYPE_TEXT, 'TEXT', \_AM_WGFAKER_DATATYPE_TEXT],
+            [Constants::DATATYPE_TEXT_FIXED, 'TEXT_FIXED', \_AM_WGFAKER_DATATYPE_TEXT_FIXED],
+            [Constants::DATATYPE_TEXT_RUNNING, 'TEXT_RUNNING', \_AM_WGFAKER_DATATYPE_TEXT_RUNNING],
             [Constants::DATATYPE_LOREMIPSUM, 'LOREM_ISPUM', $this->getLoremIpsum()],
             [Constants::DATATYPE_FIRSTNAME, 'FIRSTNAME', $this->getFirstnameList()],
             [Constants::DATATYPE_LASTNAME, 'LASTNAME', $this->getLastnameList()],
-            [Constants::DATATYPE_FIRSTLASTNAME, 'FIRSTLASTNAME', '{Random firstname + random lastname}'],
-            [Constants::DATATYPE_EMAIL, 'EMAIL', '{firstname}.{lastname}@domain.com'],
+            [Constants::DATATYPE_FIRSTLASTNAME, 'FIRSTLASTNAME', \_AM_WGFAKER_DATATYPE_FIRSTLASTNAME],
+            [Constants::DATATYPE_EMAIL, 'EMAIL', \_AM_WGFAKER_DATATYPE_EMAIL],
+            [Constants::DATATYPE_PHONE, 'PHONE', \_AM_WGFAKER_DATATYPE_PHONE],
             [Constants::DATATYPE_CITY, 'CITY', $this->getCityList()],
             [Constants::DATATYPE_STATE, 'STATE', $this->getStateList()],
-            [Constants::DATATYPE_DATE, 'DATE', '{Random date}'],
-            [Constants::DATATYPE_UID, 'UID', '{Random uid}'],
-            [Constants::DATATYPE_IP4, 'IP4', '{Random IP4}'],
-            [Constants::DATATYPE_IP6, 'IP6', '{Random IP6}'],
-            [Constants::DATATYPE_PHONE, 'PHONE', '{Random Phone number}'],
-            [Constants::DATATYPE_COUNTRY_CODE, 'COUNTRY_CODE', '{Random country code}'],
-            [Constants::DATATYPE_IMAGE, 'IMAGE', '{Sample image}'],
-            [Constants::DATATYPE_ID_OF_TABLE, 'ID_OF_TABLE', '{1 to value of max lines}'],
+            [Constants::DATATYPE_COUNTRY_CODE, 'COUNTRY_CODE', \_AM_WGFAKER_DATATYPE_COUNTRY_CODE],
+            [Constants::DATATYPE_DATE, 'DATE', \_AM_WGFAKER_DATATYPE_DATE],
+            [Constants::DATATYPE_DATE_RANGE, 'DATE_RANGE', \_AM_WGFAKER_DATATYPE_DATE_RANGE],
+            [Constants::DATATYPE_DATE_NOW, 'DATE_NOW', \_AM_WGFAKER_DATATYPE_DATE_NOW],
+            [Constants::DATATYPE_YESNO, 'YES_NO', \_AM_WGFAKER_DATATYPE_YES_NO],
+            [Constants::DATATYPE_UID, 'UID', \_AM_WGFAKER_DATATYPE_UID],
+            [Constants::DATATYPE_IP4, 'IP4', \_AM_WGFAKER_DATATYPE_IP4],
+            [Constants::DATATYPE_IP6, 'IP6', \_AM_WGFAKER_DATATYPE_IP6],
+            [Constants::DATATYPE_IMAGE, 'IMAGE', \_AM_WGFAKER_DATATYPE_IMAGE],
+            [Constants::DATATYPE_FILE, 'FILE', \_AM_WGFAKER_DATATYPE_FILE],
+            [Constants::DATATYPE_TABLE_ID, 'TABLE_ID', \_AM_WGFAKER_DATATYPE_TABLE_ID],
+            [Constants::DATATYPE_PARENT_ID, 'PARENT_ID', \_AM_WGFAKER_DATATYPE_PARENT_ID],
+            [Constants::DATATYPE_COLOR, 'COLOR', \_AM_WGFAKER_DATATYPE_COLOR],
+            [Constants::DATATYPE_UUID, 'UUID', \_AM_WGFAKER_DATATYPE_UUID],
+            [Constants::DATATYPE_LANG_CODE, 'LANG_CODE', \_AM_WGFAKER_DATATYPE_LANG_CODE],
+            [Constants::DATATYPE_CUSTOM_LIST, 'CUSTOM_LIST', \_AM_WGFAKER_DATATYPE_CUSTOM_LIST],
             //[Constants::DATATYPE_ID_OF_MODULE, 'ID_OF_MODULE', '{random id of existing modules}'],
-            [Constants::DATATYPE_INTEGER_1, 'INTEGER_1', '1'],
         ];
 
         foreach ($datatypes as $key => $datatype) {

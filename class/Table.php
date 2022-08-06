@@ -54,9 +54,10 @@ class Table extends \XoopsObject
     {
         $this->initVar('id', \XOBJ_DTYPE_INT);
         $this->initVar('mid', \XOBJ_DTYPE_INT);
-        $this->initVar('module', \XOBJ_DTYPE_TXTBOX);
+        $this->initVar('mod_dirname', \XOBJ_DTYPE_TXTBOX);
         $this->initVar('name', \XOBJ_DTYPE_TXTBOX);
         $this->initVar('skip', \XOBJ_DTYPE_INT);
+        $this->initVar('lines', \XOBJ_DTYPE_INT);
         $this->initVar('datecreated', \XOBJ_DTYPE_INT);
         $this->initVar('submitter', \XOBJ_DTYPE_INT);
     }
@@ -102,9 +103,14 @@ class Table extends \XoopsObject
         // Form Text Mid
         $form->addElement(new \XoopsFormText(\_AM_WGFAKER_TABLE_MID, 'mid', 50, 255, $this->getVar('mid')));
         // Form Text Module
-        $form->addElement(new \XoopsFormText(\_AM_WGFAKER_TABLE_MODULE, 'module', 50, 255, $this->getVar('module')));
+        $form->addElement(new \XoopsFormText(\_AM_WGFAKER_TABLE_MOD_DIRNAME, 'mod_dirname', 50, 255, $this->getVar('mod_dirname')));
         // Form Text Name
         $form->addElement(new \XoopsFormText(\_AM_WGFAKER_TABLE_NAME, 'name', 50, 255, $this->getVar('name')));
+        // Form Text Name
+        $lines = $this->isNew() ? 20 : $this->getVar('lines');
+        $linesText = new \XoopsFormText(\_AM_WGFAKER_TABLE_LINES, 'lines', 50, 255, $lines);
+        $linesText->setDescription(\_AM_WGFAKER_TABLE_LINES_DESC);
+        $form->addElement($linesText);
         // Form Radio Yes/No Skip
         $Skip = $this->isNew() ?: $this->getVar('skip');
         $form->addElement(new \XoopsFormRadioYN(\_AM_WGFAKER_TABLE_SKIP, 'skip', $Skip));

@@ -3,7 +3,6 @@
 function getPaths()
 {
     $moduleDirName      = \basename(\dirname(__DIR__));
-    $moduleDirNameUpper = \mb_strtoupper($moduleDirName);
 
     return (object)[
         'name'          => \mb_strtoupper($moduleDirName) . ' PathConfigurator',

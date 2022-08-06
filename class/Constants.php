@@ -32,7 +32,7 @@ namespace XoopsModules\Wgfaker;
 interface Constants
 {
     // Constants for tables
-    public const TABLE_FIELD = 0;
+    public const TABLE_COL = 0;
     public const TABLE_DATATYPE = 1;
     public const TABLE_TABLE = 2;
 
@@ -64,10 +64,21 @@ interface Constants
     public const DATATYPE_PHONE         = 17;
     public const DATATYPE_COUNTRY_CODE  = 18;
     public const DATATYPE_IMAGE         = 19;
-    public const DATATYPE_ID_OF_TABLE   = 20;
+    public const DATATYPE_TABLE_ID      = 20;
+    public const DATATYPE_INT_FIXED     = 21;
+    public const DATATYPE_TEXT_FIXED    = 22;
+    public const DATATYPE_TEXT_RUNNING         = 23;
+    public const DATATYPE_FILE          = 24;
+    public const DATATYPE_DATE_RANGE    = 25;
+    public const DATATYPE_INT_RANGE     = 26;
+    public const DATATYPE_COLOR         = 27;
+    public const DATATYPE_UUID          = 28;
+    public const DATATYPE_LANG_CODE     = 29;
+    public const DATATYPE_DATE_NOW      = 30;
+    public const DATATYPE_CUSTOM_LIST   = 31;
+    public const DATATYPE_INT_RUNNING   = 32;
+    public const DATATYPE_PARENT_ID     = 33;
+
     //public const DATATYPE_ID_OF_MODULE  = 21;
-    public const DATATYPE_INTEGER_1     = 22;
-
-
 
 }

@@ -57,13 +57,13 @@ class FieldHandler extends \XoopsPersistableObjectHandler
     /**
      * retrieve a field
      *
-     * @param int $i field id
+     * @param int $id field id
      * @param null fields
      * @return \XoopsObject|null reference to the {@link Get} object
      */
-    public function get($i = null, $fields = null)
+    public function get($id = null, $fields = null)
     {
-        return parent::get($i, $fields);
+        return parent::get($id, $fields);
     }
 
     /**
@@ -174,6 +174,7 @@ class FieldHandler extends \XoopsPersistableObjectHandler
     /**
      * @public function getForm
      * @param int $mid
+     * @param $tableid
      * @return \XoopsSimpleForm
      */
     public function getFormCombo($mid, $tableid)

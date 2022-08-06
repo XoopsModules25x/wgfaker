@@ -57,13 +57,13 @@ class TableHandler extends \XoopsPersistableObjectHandler
     /**
      * retrieve a field
      *
-     * @param int $i field id
+     * @param int $id field id
      * @param null fields
      * @return \XoopsObject|null reference to the {@link Get} object
      */
-    public function get($i = null, $fields = null)
+    public function get($id = null, $fields = null)
     {
-        return parent::get($i, $fields);
+        return parent::get($id, $fields);
     }
 
     /**
@@ -142,7 +142,12 @@ class TableHandler extends \XoopsPersistableObjectHandler
         $modulesHandler = \xoops_getHandler('module');
         $moduleSelect = new \XoopsFormSelect(\_AM_WGFAKER_SELECT_MODULE, 'mid', $mid);
         $moduleSelect->addOption('');
-        $moduleSelect->addOptionArray($modulesHandler->getList());
+        $modulesArr = $modulesHandler->getObjects();
+        foreach ($modulesArr as $module) {
+            if (1 === (int)$module->getVar('isactive')) {
+                $moduleSelect->addOption($module->getVar('mid'), $module->getVar('dirname'));
+            }
+        }
         $moduleSelect->setExtra(' onchange="submit();return true;"');
         $form->addElement($moduleSelect);
 

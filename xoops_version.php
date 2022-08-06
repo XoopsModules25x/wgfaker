@@ -29,7 +29,7 @@ $moduleDirNameUpper = \mb_strtoupper($moduleDirName);
 // ------------------- Informations ------------------- //
 $modversion = [
     'name'                => \_MI_WGFAKER_NAME,
-    'version'             => '1.0.0',
+    'version'             => '1.0.1',
     'description'         => \_MI_WGFAKER_DESC,
     'author'              => 'Goffy - Wedega',
     'author_mail'         => 'webmaster@wedega.com',
@@ -41,7 +41,7 @@ $modversion = [
     'help'                => 'page=help',
     'release_info'        => 'release_info',
     'release_file'        => \XOOPS_URL . '/modules/wgfaker/docs/release_info file',
-    'release_date'        => '2022/02/03',
+    'release_date'        => '2022/08/06',
     'manual'              => 'link to manual file',
     'manual_file'         => \XOOPS_URL . '/modules/wgfaker/docs/install.txt',
     'min_php'             => '7.4',
@@ -61,8 +61,8 @@ $modversion = [
     'support_name'        => 'Support Forum',
     'module_website_url'  => 'www.xoops.org',
     'module_website_name' => 'XOOPS Project',
-    'release'             => '03.02.2022',
-    'module_status'       => 'Beta 1',
+    'release'             => '06.08.2022',
+    'module_status'       => 'RC 1',
     'system_menu'         => 1,
     'hasAdmin'            => 1,
     'hasMain'             => 0,
@@ -109,7 +109,7 @@ $modversion['config'][] = [
     'description' => '\_MI_WGFAKER_ADMIN_PAGER_DESC',
     'formtype'    => 'textbox',
     'valuetype'   => 'int',
-    'default'     => 25,
+    'default'     => 50,
 ];
 // Number column
 $modversion['config'][] = [

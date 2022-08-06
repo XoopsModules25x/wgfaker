@@ -10,9 +10,9 @@
         <thead>
             <tr class='head'>
                 <th class="center"><{$smarty.const._AM_WGFAKER_TABLE_ID}></th>
-                <th class="center"><{$smarty.const._AM_WGFAKER_TABLE_MODULE}></th>
+                <th class="center"><{$smarty.const._AM_WGFAKER_TABLE_MOD_DIRNAME}></th>
                 <th class="center"><{$smarty.const._AM_WGFAKER_TABLE_NAME}></th>
-                <th class="center"><{$smarty.const._AM_WGFAKER_TABLE_SKIP}></th>
+                <th class="center"><{$smarty.const._AM_WGFAKER_TABLE_LINES}></th>
                 <th class="center"><{$smarty.const._AM_WGFAKER_TABLE_DATECREATED}></th>
                 <th class="center"><{$smarty.const._AM_WGFAKER_TABLE_SUBMITTER}></th>
                 <th class="center width5"><{$smarty.const._AM_WGFAKER_FORM_ACTION}></th>
@@ -23,9 +23,9 @@
             <{foreach item=table from=$table_list}>
             <tr class='<{cycle values='odd, even'}>'>
                 <td class='center'><{$table.id}></td>
-                <td class='center'><{$table.module}></td>
+                <td class='center'><{$table.mod_dirname}></td>
                 <td class='center'><{$table.name}></td>
-                <td class='center'><{$table.skip_text}></td>
+                <td class='center'><{$table.lines}></td>
                 <td class='center'><{$table.datecreated_text}></td>
                 <td class='center'><{$table.submitter_text}></td>
                 <td class="center  width5">

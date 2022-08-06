@@ -17,6 +17,7 @@
                     <th class="center"><{$smarty.const._AM_WGFAKER_FIELD_NAME}></th>
                     <th class="center"><{$smarty.const._AM_WGFAKER_FIELD_TYPE}></th>
                     <th class="center"><{$smarty.const._AM_WGFAKER_FIELD_DATATYPEID}></th>
+                    <th class="center"><{$smarty.const._AM_WGFAKER_FIELD_PARAMS}></th>
                     <th class="center"><{$smarty.const._AM_WGFAKER_FIELD_DATECREATED}></th>
                     <th class="center"><{$smarty.const._AM_WGFAKER_FIELD_SUBMITTER}></th>
                     <th class="center width5"><{$smarty.const._AM_WGFAKER_FORM_ACTION}></th>
@@ -31,6 +32,7 @@
                         <td class='center'><{$field.name}></td>
                         <td class='center'><{$field.type}></td>
                         <td class='center'><{$field.datatype_text}></td>
+                        <td class='center'><{$field.params}></td>
                         <td class='center'><{$field.datecreated}></td>
                         <td class='center'><{$field.submitter}></td>
                         <td class="center  width5">
@@ -49,6 +51,7 @@
             <{if $table.yml_exist|default:false}>
                 <a target="_blank" class="btn btn-primary" href="field.php?op=show_table&amp;mid=<{$table.mid}>&amp;tableid=<{$table.id}>" title="<{$smarty.const._AM_WGFAKER_TESTDATA_SHOW_TMP}>"><{$smarty.const._AM_WGFAKER_TESTDATA_SHOW_TMP}></a>
                 <a target="_blank" class="btn btn-primary" href="field.php?op=show_yml&amp;mid=<{$table.mid}>&amp;tableid=<{$table.id}>" title="<{$smarty.const._AM_WGFAKER_TESTDATA_SHOW_YML}>"><{$smarty.const._AM_WGFAKER_TESTDATA_SHOW_YML}></a>
+                <a target="_self" class="btn btn-primary" href="field.php?op=copy_yml&amp;mid=<{$table.mid}>&amp;tableid=<{$table.id}>" title="<{$smarty.const._AM_WGFAKER_TESTDATA_COPY_YML}>"><{$smarty.const._AM_WGFAKER_TESTDATA_COPY_YML}></a>
             <{/if}>
         </div>
     <{/foreach}>
@@ -78,6 +81,61 @@
 
 <{if $form|default:''}>
     <{$form|default:false}>
+    <script>
+        function toogleFieldParams() {
+
+            var select = document.getElementById('datatypeid');
+            var vselected = select.options[select.selectedIndex].value;
+
+            disableEle('param_text');
+            disableEle('param_text_running');
+            disableEle('param_text_running_blank1');
+            disableEle('param_intrangefrom');
+            disableEle('param_intrangeto');
+            disableEle('param_daterangefrom');
+            disableEle('param_daterangeto');
+            disableEle('param_table_id');
+            disableEle('param_custom_list');
+
+            switch(parseInt(vselected)) {
+                case <{$constFixedText}>:
+                case <{$constFixedNumber}>:
+                    enableEle('param_text');
+                    break;
+                case <{$constTextRunning}>:
+                    enableEle('param_text_running');
+                    enableEle('param_text_running_blank1');
+                    break;
+                case <{$constIntRange}>:
+                    enableEle('param_intrangefrom');
+                    enableEle('param_intrangeto');
+                    break;
+                case <{$constDateRange}>:
+                    enableEle('param_daterangefrom');
+                    enableEle('param_daterangeto');
+                    break;
+                case <{$constTableId}>:
+                    enableEle('param_table_id');
+                    break;
+                case <{$constCustomList}>:
+                    enableEle('param_custom_list');
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        function enableEle ($ele) {
+            xoopsGetElementById($ele).removeAttribute("disabled");
+            xoopsGetElementById($ele).style.backgroundColor = "";
+        }
+
+        function disableEle ($ele) {
+            xoopsGetElementById($ele).setAttribute("disabled", "disabled");
+            xoopsGetElementById($ele).style.backgroundColor = "#d4d5d6";
+        }
+
+    </script>
 <{/if}>
 <{if $error|default:''}>
     <div class="errorMsg"><strong><{$error|default:false}></strong></div>

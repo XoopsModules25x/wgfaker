@@ -71,7 +71,6 @@ function wgfaker_RewriteUrl($module, $array, $type = 'content')
 {
     $comment = '';
     $helper = \XoopsModules\Wgfaker\Helper::getInstance();
-    $datatypeHandler = $helper->getHandler('datatype');
     $lenght_id = $helper->getConfig('lenght_id');
     $rewrite_url = $helper->getConfig('rewrite_url');
 
@@ -156,7 +155,6 @@ function wgfaker_Filter($url, $type = '') {
 
     // Get regular expression from module setting. default setting is : `[^a-z0-9]`i
     $helper = \XoopsModules\Wgfaker\Helper::getInstance();
-    $datatypeHandler = $helper->getHandler('datatype');
     $regular_expression = $helper->getConfig('regular_expression');
 
     $url = \strip_tags($url);

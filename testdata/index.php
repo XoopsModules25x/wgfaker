@@ -43,6 +43,28 @@ switch ($op) {
                 \redirect_header('../admin/index.php', 3, \implode(',', $GLOBALS['xoopsSecurity']->getErrors()));
             }
             loadSampleData();
+
+            //check module id in test data
+            $tableHandler = $helper->getHandler('Table');
+            $modulesHandler = \xoops_getHandler('module');
+            $modulesArr = $modulesHandler->getList();
+            foreach ($modulesArr as $key => $name) {
+                $crTable = new \CriteriaCompo();
+                $crTable->add(new \Criteria('mod_dirname', $name));
+                $tableCount = $tableHandler->getCount($crTable);
+                if ($tableCount > 0) {
+                    //update mid in wgfaker_table
+                    $sql = 'UPDATE `' . $GLOBALS['xoopsDB']->prefix('wgfaker_table') . "` SET `mid` = '" . $key . "' WHERE `wgf_wgfaker_table`.`mod_dirname` = '" . $name . "';";
+                    $GLOBALS['xoopsDB']->queryF($sql);
+                    $sql = 'UPDATE ' . $GLOBALS['xoopsDB']->prefix('wgfaker_field') . ' INNER JOIN ' . $GLOBALS['xoopsDB']->prefix('wgfaker_table') . ' ON ' . $GLOBALS['xoopsDB']->prefix('wgfaker_field') . '.tableid = ' . $GLOBALS['xoopsDB']->prefix('wgfaker_table') . '.id';
+                    $sql .= ' SET ' . $GLOBALS['xoopsDB']->prefix('wgfaker_field') . '.mid = ' . $GLOBALS['xoopsDB']->prefix('wgfaker_table') . '.mid';
+                    $GLOBALS['xoopsDB']->queryF($sql);
+                }
+                unset($crTable);
+            }
+
+            \redirect_header('../admin/index.php', 1, \constant('CO_' . $moduleDirNameUpper . '_' . 'SAMPLEDATA_SUCCESS'));
+
         } else {
             xoops_cp_header();
             xoops_confirm(['ok' => 1, 'op' => 'load'], 'index.php', \constant('CO_' . $moduleDirNameUpper . '_' . 'ADD_SAMPLEDATA_OK'), \constant('CO_' . $moduleDirNameUpper . '_' . 'CONFIRM'));
@@ -60,7 +82,6 @@ function loadSampleData(): void
     global $xoopsConfig;
 
     $moduleDirName      = \basename(\dirname(__DIR__));
-    $moduleDirNameUpper = \mb_strtoupper($moduleDirName);
 
     $utility      = new Wgfaker\Utility();
     $configurator = new Common\Configurator();
@@ -93,7 +114,6 @@ function loadSampleData(): void
             $utility::rcopy($src, $dest);
         }
     }
-    \redirect_header('../admin/index.php', 1, \constant('CO_' . $moduleDirNameUpper . '_' . 'SAMPLEDATA_SUCCESS'));
 }
 
 function saveSampleData(): void
