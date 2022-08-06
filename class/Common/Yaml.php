@@ -104,7 +104,6 @@ class Yaml
                     $values['values'][$i][$lineArr['column']] = $lineArr['value'];
                 }
             }
-
         }
 
         return $values;
@@ -119,7 +118,13 @@ class Yaml
     private function splitLine (string $line)
     {
         $arrValue = [];
-        $lineArr = \explode( ':', $line);
+        //search for first : to avoid multiple split if value contains : (like IP6)
+        $pos = strpos($line, ':');
+        if ($pos !== false) {
+            //replace by unique separator
+            $line = substr_replace($line, '|:|', $pos, 1);
+        }
+        $lineArr = \explode( '|:|', $line);
         if (\count($lineArr) > 0) {
             $arrValue['column'] = $lineArr[0];
             $arrValue['value'] = $lineArr[1];

@@ -1,0 +1,240 @@
+-
+    art_id: 1
+    art_cat: 1
+    art_title: My article 1
+    art_descr: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+    art_img: 'blank.gif'
+    art_status: 3
+    art_file: 'myfile.txt'
+    art_ratings: 2804.57
+    art_votes: 3264
+    art_created: 1634337617
+    art_submitter: 1
+-
+    art_id: 2
+    art_cat: 3
+    art_title: My article 2
+    art_descr: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+    art_img: 'blank.gif'
+    art_status: 2
+    art_file: 'myfile.txt'
+    art_ratings: 4446.21
+    art_votes: 9919
+    art_created: 1654269726
+    art_submitter: 1
+-
+    art_id: 3
+    art_cat: 3
+    art_title: My article 3
+    art_descr: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+    art_img: 'blank.gif'
+    art_status: 4
+    art_file: 'myfile.txt'
+    art_ratings: 5836.27
+    art_votes: 6260
+    art_created: 1659155461
+    art_submitter: 1
+-
+    art_id: 4
+    art_cat: 1
+    art_title: My article 4
+    art_descr: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+    art_img: 'blank.gif'
+    art_status: 3
+    art_file: 'myfile.txt'
+    art_ratings: 3068.52
+    art_votes: 9442
+    art_created: 1636767096
+    art_submitter: 1
+-
+    art_id: 5
+    art_cat: 3
+    art_title: My article 5
+    art_descr: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+    art_img: 'blank.gif'
+    art_status: 1
+    art_file: 'myfile.txt'
+    art_ratings: 817.27
+    art_votes: 1512
+    art_created: 1650633414
+    art_submitter: 1
+-
+    art_id: 6
+    art_cat: 1
+    art_title: My article 6
+    art_descr: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+    art_img: 'blank.gif'
+    art_status: 2
+    art_file: 'myfile.txt'
+    art_ratings: 8432.58
+    art_votes: 1175
+    art_created: 1637928973
+    art_submitter: 1
+-
+    art_id: 7
+    art_cat: 3
+    art_title: My article 7
+    art_descr: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+    art_img: 'blank.gif'
+    art_status: 4
+    art_file: 'myfile.txt'
+    art_ratings: 4065.82
+    art_votes: 510
+    art_created: 1641793777
+    art_submitter: 1
+-
+    art_id: 8
+    art_cat: 3
+    art_title: My article 8
+    art_descr: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+    art_img: 'blank.gif'
+    art_status: 1
+    art_file: 'myfile.txt'
+    art_ratings: 2090.75
+    art_votes: 3832
+    art_created: 1651586404
+    art_submitter: 1
+-
+    art_id: 9
+    art_cat: 3
+    art_title: My article 9
+    art_descr: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+    art_img: 'blank.gif'
+    art_status: 3
+    art_file: 'myfile.txt'
+    art_ratings: 6104.77
+    art_votes: 6175
+    art_created: 1632184107
+    art_submitter: 1
+-
+    art_id: 10
+    art_cat: 3
+    art_title: My article 10
+    art_descr: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+    art_img: 'blank.gif'
+    art_status: 4
+    art_file: 'myfile.txt'
+    art_ratings: 7992.23
+    art_votes: 5541
+    art_created: 1637104424
+    art_submitter: 1
+-
+    art_id: 11
+    art_cat: 2
+    art_title: My article 11
+    art_descr: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+    art_img: 'blank.gif'
+    art_status: 2
+    art_file: 'myfile.txt'
+    art_ratings: 7867.91
+    art_votes: 2880
+    art_created: 1632028784
+    art_submitter: 1
+-
+    art_id: 12
+    art_cat: 2
+    art_title: My article 12
+    art_descr: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+    art_img: 'blank.gif'
+    art_status: 3
+    art_file: 'myfile.txt'
+    art_ratings: 248.04
+    art_votes: 4371
+    art_created: 1654179059
+    art_submitter: 1
+-
+    art_id: 13
+    art_cat: 3
+    art_title: My article 13
+    art_descr: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+    art_img: 'blank.gif'
+    art_status: 1
+    art_file: 'myfile.txt'
+    art_ratings: 3580.28
+    art_votes: 5510
+    art_created: 1653877597
+    art_submitter: 1
+-
+    art_id: 14
+    art_cat: 1
+    art_title: My article 14
+    art_descr: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+    art_img: 'blank.gif'
+    art_status: 1
+    art_file: 'myfile.txt'
+    art_ratings: 1260.82
+    art_votes: 8786
+    art_created: 1658487530
+    art_submitter: 1
+-
+    art_id: 15
+    art_cat: 3
+    art_title: My article 15
+    art_descr: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+    art_img: 'blank.gif'
+    art_status: 2
+    art_file: 'myfile.txt'
+    art_ratings: 5345.48
+    art_votes: 1140
+    art_created: 1634580191
+    art_submitter: 1
+-
+    art_id: 16
+    art_cat: 3
+    art_title: My article 16
+    art_descr: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+    art_img: 'blank.gif'
+    art_status: 2
+    art_file: 'myfile.txt'
+    art_ratings: 5881.02
+    art_votes: 1726
+    art_created: 1652065544
+    art_submitter: 1
+-
+    art_id: 17
+    art_cat: 3
+    art_title: My article 17
+    art_descr: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+    art_img: 'blank.gif'
+    art_status: 2
+    art_file: 'myfile.txt'
+    art_ratings: 6631.22
+    art_votes: 2325
+    art_created: 1658370408
+    art_submitter: 1
+-
+    art_id: 18
+    art_cat: 2
+    art_title: My article 18
+    art_descr: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+    art_img: 'blank.gif'
+    art_status: 2
+    art_file: 'myfile.txt'
+    art_ratings: 4459.04
+    art_votes: 8472
+    art_created: 1635538350
+    art_submitter: 1
+-
+    art_id: 19
+    art_cat: 3
+    art_title: My article 19
+    art_descr: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+    art_img: 'blank.gif'
+    art_status: 1
+    art_file: 'myfile.txt'
+    art_ratings: 5150.8
+    art_votes: 241
+    art_created: 1648340106
+    art_submitter: 1
+-
+    art_id: 20
+    art_cat: 3
+    art_title: My article 20
+    art_descr: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+    art_img: 'blank.gif'
+    art_status: 2
+    art_file: 'myfile.txt'
+    art_ratings: 6774.31
+    art_votes: 7800
+    art_created: 1652602911
+    art_submitter: 1

@@ -1,0 +1,30 @@
+-
+    cat_id: 1
+    cat_name: My Category 1
+    cat_logo: 'blank.gif'
+    cat_created: 1637400046
+    cat_submitter: 1
+-
+    cat_id: 2
+    cat_name: My Category 2
+    cat_logo: 'blank.gif'
+    cat_created: 1632997373
+    cat_submitter: 1
+-
+    cat_id: 3
+    cat_name: My Category 3
+    cat_logo: 'blank.gif'
+    cat_created: 1658255396
+    cat_submitter: 1
+-
+    cat_id: 4
+    cat_name: My Category 4
+    cat_logo: 'blank.gif'
+    cat_created: 1652813701
+    cat_submitter: 1
+-
+    cat_id: 5
+    cat_name: My Category 5
+    cat_logo: 'blank.gif'
+    cat_created: 1634354942
+    cat_submitter: 1

@@ -30,12 +30,13 @@ use XoopsModules\Wgfaker\Common;
 
 require __DIR__ . '/header.php';
 // Get all request values
-$op    = Request::getCmd('op', 'list');
-$tableId = Request::getInt('id');
-$mid = Request::getInt('mid');
-$start = Request::getInt('start');
-$module = Request::getString('module');
-$limit = Request::getInt('limit', $helper->getConfig('adminpager'));
+$op          = Request::getCmd('op', 'list');
+$tableId     = Request::getInt('id');
+$mid         = Request::getInt('mid');
+$mod_dirname = Request::getString('mod_dirname');
+$start       = Request::getInt('start');
+$limit       = Request::getInt('limit', $helper->getConfig('adminpager'));
+
 $GLOBALS['xoopsTpl']->assign('start', $start);
 $GLOBALS['xoopsTpl']->assign('limit', $limit);
 if (Request::hasVar('read')) {
@@ -75,7 +76,11 @@ switch ($op) {
                 $GLOBALS['xoopsTpl']->assign('pagenav', $pagenav->renderNav());
             }
         } else {
-            $GLOBALS['xoopsTpl']->assign('error', \_AM_WGFAKER_THEREARENT_TABLE);
+            if ($mid > 0) {
+                $GLOBALS['xoopsTpl']->assign('error', \_AM_WGFAKER_THEREARENT_TABLE);
+            } else {
+                $GLOBALS['xoopsTpl']->assign('error', \_AM_WGFAKER_NOSELECTED_MODULE);
+            }
         }
         break;
     case 'read':
@@ -90,7 +95,7 @@ switch ($op) {
             if (0 == $tableCount) {
                 $tableObj = $tableHandler->create();
                 $tableObj->setVar('mid', $mid);
-                $tableObj->setVar('module', $moduleObj->getVar('name'));
+                $tableObj->setVar('module', $moduleObj->getVar('dirname'));
                 $tableObj->setVar('name', $table);
                 $tableObj->setVar('skip', 0);
                 $tableObj->setVar('datecreated', \time());
@@ -108,7 +113,7 @@ switch ($op) {
             }
 
         }
-        \redirect_header('table.php?op=list&amp;mid=' . $mid . '&amp;start=' . $start . '&amp;limit=' . $limit, 2, \_AM_WGFAKER_FORM_OK);
+        \redirect_header('table.php?op=list&amp;mid=' . $mid . '&amp;start=' . $start . '&amp;limit=' . $limit . '&mid=' . $mid, 2, \_AM_WGFAKER_FORM_OK);
         break;
     case 'new':
         $templateMain = 'wgfaker_admin_table.tpl';
@@ -146,15 +151,16 @@ switch ($op) {
         }
         // Set Vars
         $tableObj->setVar('mid', Request::getString('mid'));
-        $tableObj->setVar('module', Request::getString('module'));
+        $tableObj->setVar('mod_dirname', Request::getString('mod_dirname'));
         $tableObj->setVar('name', Request::getString('name'));
+        $tableObj->setVar('lines', Request::getInt('lines'));
         $tableObj->setVar('skip', Request::getInt('skip'));
         $tableDatecreatedObj = \DateTime::createFromFormat(\_SHORTDATESTRING, Request::getString('datecreated'));
         $tableObj->setVar('datecreated', $tableDatecreatedObj->getTimestamp());
         $tableObj->setVar('submitter', Request::getInt('submitter'));
         // Insert Data
         if ($tableHandler->insert($tableObj)) {
-            \redirect_header('table.php?op=list&amp;start=' . $start . '&amp;limit=' . $limit, 2, \_AM_WGFAKER_FORM_OK);
+            \redirect_header('table.php?op=list&amp;start=' . $start . '&amp;limit=' . $limit . '&mid=' . $mid, 2, \_AM_WGFAKER_FORM_OK);
         }
         // Get Form
         $GLOBALS['xoopsTpl']->assign('error', $tableObj->getHtmlErrors());
@@ -178,7 +184,6 @@ switch ($op) {
         $templateMain = 'wgfaker_admin_table.tpl';
         $GLOBALS['xoopsTpl']->assign('navigation', $adminObject->displayNavigation('table.php'));
         $tableObj = $tableHandler->get($tableId);
-        $Module = $tableObj->getVar('module');
         if (isset($_REQUEST['ok']) && 1 == $_REQUEST['ok']) {
             if (!$GLOBALS['xoopsSecurity']->check()) {
                 \redirect_header('table.php', 3, \implode(', ', $GLOBALS['xoopsSecurity']->getErrors()));
@@ -192,7 +197,7 @@ switch ($op) {
             $customConfirm = new Common\Confirm(
                 ['ok' => 1, 'id' => $tableId, 'start' => $start, 'limit' => $limit, 'op' => 'delete'],
                 $_SERVER['REQUEST_URI'],
-                \sprintf(\_AM_WGFAKER_FORM_SURE_DELETE, $tableObj->getVar('module')));
+                \sprintf(\_AM_WGFAKER_FORM_SURE_DELETE, $tableObj->getVar('mod_dirname')));
             $form = $customConfirm->getFormConfirm();
             $GLOBALS['xoopsTpl']->assign('form', $form->render());
         }
