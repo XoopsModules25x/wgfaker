@@ -95,7 +95,7 @@ switch ($op) {
             if (0 == $tableCount) {
                 $tableObj = $tableHandler->create();
                 $tableObj->setVar('mid', $mid);
-                $tableObj->setVar('module', $moduleObj->getVar('dirname'));
+                $tableObj->setVar('mod_dirname', $moduleObj->getVar('dirname'));
                 $tableObj->setVar('name', $table);
                 $tableObj->setVar('skip', 0);
                 $tableObj->setVar('datecreated', \time());

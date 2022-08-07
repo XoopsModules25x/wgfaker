@@ -41,7 +41,7 @@ class TableHandler extends \XoopsPersistableObjectHandler
      */
     public function __construct(\XoopsDatabase $db)
     {
-        parent::__construct($db, 'wgfaker_table', Table::class, 'id', 'module');
+        parent::__construct($db, 'wgfaker_table', Table::class, 'id', 'mod_dirname');
     }
 
     /**
