@@ -112,8 +112,8 @@ class Table extends \XoopsObject
         $linesText->setDescription(\_AM_WGFAKER_TABLE_LINES_DESC);
         $form->addElement($linesText);
         // Form Radio Yes/No Skip
-        $Skip = $this->isNew() ?: $this->getVar('skip');
-        $form->addElement(new \XoopsFormRadioYN(\_AM_WGFAKER_TABLE_SKIP, 'skip', $Skip));
+        //$Skip = $this->isNew() ?: $this->getVar('skip');
+        //$form->addElement(new \XoopsFormRadioYN(\_AM_WGFAKER_TABLE_SKIP, 'skip', $Skip));
         // Form Text Date Select Datecreated
         $Datecreated = $this->isNew() ? \time() : $this->getVar('datecreated');
         $form->addElement(new \XoopsFormTextDateSelect(\_AM_WGFAKER_TABLE_DATECREATED, 'datecreated', '', $Datecreated));

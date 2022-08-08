@@ -196,6 +196,7 @@ class DatatypeHandler extends \XoopsPersistableObjectHandler
             [Constants::DATATYPE_TEXT_FIXED, 'TEXT_FIXED', \_AM_WGFAKER_DATATYPE_TEXT_FIXED],
             [Constants::DATATYPE_TEXT_RUNNING, 'TEXT_RUNNING', \_AM_WGFAKER_DATATYPE_TEXT_RUNNING],
             [Constants::DATATYPE_LOREMIPSUM, 'LOREM_ISPUM', $this->getLoremIpsum()],
+            [Constants::DATATYPE_LOREMIPSUM_SHORT, 'LOREM_ISPUM_SHORT', $this->getLoremIpsumShort()],
             [Constants::DATATYPE_FIRSTNAME, 'FIRSTNAME', $this->getFirstnameList()],
             [Constants::DATATYPE_LASTNAME, 'LASTNAME', $this->getLastnameList()],
             [Constants::DATATYPE_FIRSTLASTNAME, 'FIRSTLASTNAME', \_AM_WGFAKER_DATATYPE_FIRSTLASTNAME],
@@ -253,5 +254,8 @@ class DatatypeHandler extends \XoopsPersistableObjectHandler
     }
     private function getLoremIpsum() {
         return 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.';
+    }
+    private function getLoremIpsumShort() {
+        return 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.';
     }
 }

@@ -150,6 +150,9 @@ class TableHandler extends \XoopsPersistableObjectHandler
         }
         $moduleSelect->setExtra(' onchange="submit();return true;"');
         $form->addElement($moduleSelect);
+        $cbReadLines = new \XoopsFormCheckBox(\_AM_WGFAKER_READ_LINES, 'read_lines', true);
+        $cbReadLines->addOption(1, ' ');
+        $form->addElement($cbReadLines);
 
         // To Save
         $form->addElement(new \XoopsFormHidden('op', 'list'));

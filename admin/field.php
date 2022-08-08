@@ -149,6 +149,18 @@ switch ($op) {
             \redirect_header('field.php?op=list&amp;mid=' . $mid . '&amp;tableid=' . $tableid, 2, \_AM_WGFAKER_FORM_OK);
         }
         break;
+    case 'plugin':
+        $name = Request::getString('name');
+        // plugins can make corrections of created data
+        $pluginFile = \WGFAKER_PATH . '/plugins/' . $name . '.php';
+        if (\file_exists($pluginFile)) {
+            require_once($pluginFile);
+            $pluginFunc = 'wgfaker_plugin_' . $name;
+            if (function_exists($pluginFunc)) {
+                call_user_func($pluginFunc);
+            }
+        }
+        break;
     case 'copy_yml':
         $tableObj = $tableHandler->get($tableid);
         $tableName = $tableObj->getVar('name');
