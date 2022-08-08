@@ -139,6 +139,7 @@ class Field extends \XoopsObject
         // Form Tray Params - Title
         $paramTrayTitle = new \XoopsFormElementTray(\_AM_WGFAKER_FIELD_PARAM_TEXT_RUNNING, '');
         $paramTextRunningVal = '';
+        $paramTextRunningBlankVal = 0;
         if (Constants::DATATYPE_TEXT_RUNNING === $datatypeid) {
             $paramTextRunningVal = $paramsValue;
             $paramsArr = \explode('|', $paramsValue);

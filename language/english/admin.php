@@ -50,6 +50,7 @@ require_once __DIR__ . '/common.php';
 \define('_AM_WGFAKER_ADD_TABLE', 'Add New Table');
 \define('_AM_WGFAKER_READ_TABLES', 'Read tables and fields');
 \define('_AM_WGFAKER_READ_FIELDS', 'Read fields once more');
+\define('_AM_WGFAKER_READ_LINES', 'Read number of lines of tables');
 \define('_AM_WGFAKER_SELECT_MODULE', 'Select Module');
 \define('_AM_WGFAKER_SELECT_TABLE', 'Select Table');
 \define('_AM_WGFAKER_TESTDATA_GENERATE', 'Generate testdata');

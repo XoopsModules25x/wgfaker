@@ -94,6 +94,10 @@ class Generator
      * @return mixed
      */
     public function renderer() {
+        //reset ranges
+        $this->rangeFrom = 0;
+        $this->rangeTo = 0;
+        //check type and render data
         switch ($this->type) {
             case Constants::DATATYPE_TEXT:
                 return $this->renderText();
@@ -102,7 +106,7 @@ class Generator
                     $this->rangeFrom = 1;
                 }
                 if (0 === $this->rangeTo) {
-                    $this->rangeTo = 10000;
+                    $this->rangeTo = 2000;
                 }
                 return $this->renderInteger();
             case Constants::DATATYPE_INT_RANGE:
@@ -114,16 +118,18 @@ class Generator
                 return $this->renderInteger();
             case Constants::DATATYPE_FLOAT:
                 if (0 === $this->rangeFrom) {
-                    $this->rangeFrom = 1;
+                    $this->rangeFrom = 100;
                 }
                 if (0 === $this->rangeTo) {
-                    $this->rangeTo = 1000000;
+                    $this->rangeTo = 100000;
                 }
                 return $this->renderFloat();
             case Constants::DATATYPE_YESNO:
                 return $this->renderYesNo();
             case Constants::DATATYPE_LOREMIPSUM:
                 return $this->renderLoremIpsum();
+            case Constants::DATATYPE_LOREMIPSUM_SHORT:
+                return $this->renderLoremIpsumShort();
             case Constants::DATATYPE_FIRSTNAME:
                 return $this->renderFirstname();
             case Constants::DATATYPE_LASTNAME:
@@ -289,6 +295,20 @@ class Generator
         $helper = Helper::getInstance();
         $datatypeHandler = $helper->getHandler('Datatype');
         $ret = $datatypeHandler->get(Constants::DATATYPE_LOREMIPSUM)->getVar('values');
+
+        return "'" . $ret . "'";
+    }
+
+    /**
+     * Get short Lorem Impsum
+     * @param null
+     * @return string
+     */
+    private function renderLoremIpsumShort()
+    {
+        $helper = Helper::getInstance();
+        $datatypeHandler = $helper->getHandler('Datatype');
+        $ret = $datatypeHandler->get(Constants::DATATYPE_LOREMIPSUM_SHORT)->getVar('values');
 
         return "'" . $ret . "'";
     }

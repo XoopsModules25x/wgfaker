@@ -84,10 +84,16 @@ switch ($op) {
         }
         break;
     case 'read':
+        $readLines = Request::getBool('read_lines');
         $modulesHandler = \xoops_getHandler('module');
         $moduleObj = $modulesHandler->get($mid);
-        //var_dump($moduleObj);
         foreach ($moduleObj->getInfo('tables') as $table) {
+            $numRows = 20; //default value for number of lines
+            if ($readLines) {
+                $check   = $GLOBALS['xoopsDB']->queryF('SELECT * FROM ' .  $GLOBALS['xoopsDB']->prefix($table));
+                $numRows = $GLOBALS['xoopsDB']->getRowsNum($check);
+            }
+            //write data into wgfaker_table
             $crTable = new \CriteriaCompo();
             $crTable->add(new \Criteria('mid', $mid));
             $crTable->add(new \Criteria('name', $table));
@@ -95,8 +101,9 @@ switch ($op) {
             if (0 == $tableCount) {
                 $tableObj = $tableHandler->create();
                 $tableObj->setVar('mid', $mid);
-                $tableObj->setVar('module', $moduleObj->getVar('dirname'));
+                $tableObj->setVar('mod_dirname', $moduleObj->getVar('dirname'));
                 $tableObj->setVar('name', $table);
+                $tableObj->setVar('lines', $numRows);
                 $tableObj->setVar('skip', 0);
                 $tableObj->setVar('datecreated', \time());
                 $tableObj->setVar('submitter', $GLOBALS['xoopsUser']->uid());
@@ -108,7 +115,13 @@ switch ($op) {
             } else {
                 $tableAll = $tableHandler->getAll($crTable);
                 foreach (\array_keys($tableAll) as $tableId) {
-                    $fieldHandler->readFields($mid, $tableId, $tableAll[$tableId]->getVar('name'));
+                    $tableObj = $tableHandler->get($tableId);
+                    $tableObj->setVar('lines', $numRows);
+                    $tableObj->setVar('datecreated', \time());
+                    $tableObj->setVar('submitter', $GLOBALS['xoopsUser']->uid());
+                    if ($tableHandler->insert($tableObj)) {
+                        $fieldHandler->readFields($mid, $tableId, $tableAll[$tableId]->getVar('name'));
+                    }
                 }
             }
 
