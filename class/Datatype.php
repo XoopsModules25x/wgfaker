@@ -136,7 +136,7 @@ class Datatype extends \XoopsObject
         //$values = $this->getVar('values');
         $ret['values_text']       = \strip_tags($this->getVar('values', 'e'));
         $editorMaxchar = $helper->getConfig('editor_maxchar');
-        $ret['values_short'] = $utility::truncateHtml($ret['values'], $editorMaxchar);
+        $ret['values_short'] = $utility::truncateHtml($ret['values_text'], $editorMaxchar);
         $ret['datecreated_text']  = \formatTimestamp($this->getVar('datecreated'), 's');
         $ret['submitter_text']    = \XoopsUser::getUnameFromId($this->getVar('submitter'));
         return $ret;
