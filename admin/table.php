@@ -58,6 +58,7 @@ switch ($op) {
 
         $GLOBALS['xoopsTpl']->assign('table_count', $tableCount);
         $GLOBALS['xoopsTpl']->assign('wgfaker_url', \WGFAKER_URL);
+        $GLOBALS['xoopsTpl']->assign('wgfaker_icons_url_16', \WGFAKER_ICONS_URL . '/16/');
         $GLOBALS['xoopsTpl']->assign('wgfaker_upload_url', \WGFAKER_UPLOAD_URL);
         // Table view table
         if ($tableCount > 0) {
@@ -135,20 +136,6 @@ switch ($op) {
         $GLOBALS['xoopsTpl']->assign('buttons', $adminObject->displayButton('left'));
         // Form Create
         $tableObj = $tableHandler->create();
-        $form = $tableObj->getFormTable();
-        $GLOBALS['xoopsTpl']->assign('form', $form->render());
-        break;
-    case 'clone':
-        $templateMain = 'wgfaker_admin_table.tpl';
-        $GLOBALS['xoopsTpl']->assign('navigation', $adminObject->displayNavigation('table.php'));
-        $adminObject->addItemButton(\_AM_WGFAKER_LIST_TABLE, 'table.php', 'list');
-        $adminObject->addItemButton(\_AM_WGFAKER_ADD_TABLE, 'table.php?op=new');
-        $GLOBALS['xoopsTpl']->assign('buttons', $adminObject->displayButton('left'));
-        // Request source
-        $IdSource = Request::getInt('id_source');
-        // Get Form
-        $tableObjSource = $tableHandler->get($IdSource);
-        $tableObj = $tableObjSource->xoopsClone();
         $form = $tableObj->getFormTable();
         $GLOBALS['xoopsTpl']->assign('form', $form->render());
         break;
