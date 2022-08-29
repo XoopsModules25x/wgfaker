@@ -99,7 +99,7 @@ function wgfaker_check_db($module)
     // Example: update table (add new field)
     $table   = $GLOBALS['xoopsDB']->prefix('wgfaker_images');
     $field   = 'img_exif';
-    $check   = $GLOBALS['xoopsDB']->queryF('SHOW COLUMNS FROM `' . $table . "` LIKE '" . $field . "'");
+    $check   = $GLOBALS['xoopsDB']->queryF('SHOW FIELDS FROM `' . $table . "` LIKE '" . $field . "'");
     $numRows = $GLOBALS['xoopsDB']->getRowsNum($check);
     if (!$numRows) {
         $sql = "ALTER TABLE `$table` ADD `$field` TEXT NULL AFTER `img_state`;";

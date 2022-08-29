@@ -79,12 +79,26 @@ require_once __DIR__ . '/common.php';
 \define('_AM_WGFAKER_FIELD_PARAM_INTRANGETO', 'to');
 \define('_AM_WGFAKER_FIELD_PARAM_DATERANGEFROM', 'Date range from');
 \define('_AM_WGFAKER_FIELD_PARAM_DATERANGETO', 'to');
-\define('_AM_WGFAKER_FIELD_PARAM_TABLE_ID', 'Select table column');
+\define('_AM_WGFAKER_FIELD_PARAM_TABLE_ID', 'Select table field');
 \define('_AM_WGFAKER_FIELD_PARAM_CUSTOM_LIST', 'Enter values');
 \define('_AM_WGFAKER_FIELD_PARAM_CUSTOM_LIST_LABEL', 'use | as delimiter');
 \define('_AM_WGFAKER_FIELD_DATATYPEID', 'Datatype');
 \define('_AM_WGFAKER_FIELD_DATECREATED', 'Datecreated');
 \define('_AM_WGFAKER_FIELD_SUBMITTER', 'Submitter');
+// Date
+\define('_AM_WGFAKER_DATE_DESC', 'You can increase the value of date field with predefined value, e.g. all dates in a table will be increase by one year');
+\define('_AM_WGFAKER_DATE_FORMTITLE', 'Create new dates');
+\define('_AM_WGFAKER_DATE_FIELDKEY', 'Key fields of table');
+\define('_AM_WGFAKER_DATE_FIELD', 'Select date fields');
+\define('_AM_WGFAKER_DATE_FIELD_DESC', 'Select date fields, which should be updated. If field type under "Fields" is set to "DATE", "DATE_NOW" or "DATE_RANGE" then this fields will be preselected.');
+\define('_AM_WGFAKER_DATE_PERIOD', 'Increase date by following period');
+\define('_AM_WGFAKER_DATE_ONEMONTH', '30 days');
+\define('_AM_WGFAKER_DATE_SIXMONTH', '180 days');
+\define('_AM_WGFAKER_DATE_ONEYEAR', '365 days');
+\define('_AM_WGFAKER_DATE_INFO_1', 'Pay attention');
+\define('_AM_WGFAKER_DATE_INFO_2', 'The dates in the table will be updated directy! There is no undo! If necessary create backup first!');
+\define('_AM_WGFAKER_DATE_GENERATE', 'Execute dates update');
+\define('_AM_WGFAKER_FORM_OK_GENERATE', 'Updates done: %s lines in %s fields updated. %s errors occurred');
 // Datatype add/edit
 \define('_AM_WGFAKER_DATATYPE_ADD', 'Add Datatype');
 \define('_AM_WGFAKER_DATATYPE_EDIT', 'Edit Datatype');

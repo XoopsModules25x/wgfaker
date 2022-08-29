@@ -37,7 +37,6 @@
                         <td class='center'><{$field.submitter}></td>
                         <td class="center  width5">
                             <a href="field.php?op=edit&amp;id=<{$field.id}>&amp;mid=<{$table.mid}>&amp;tableid=<{$table.id}>" title="<{$smarty.const._EDIT}>"><img src="<{xoModuleIcons16 edit.png}>" alt="<{$smarty.const._EDIT}> field" ></a>
-                            <a href="field.php?op=delete&amp;id=<{$field.id}>&amp;mid=<{$table.mid}>&amp;tableid=<{$table.id}>" title="<{$smarty.const._DELETE}>"><img src="<{xoModuleIcons16 delete.png}>" alt="<{$smarty.const._DELETE}> field" ></a>
                         </td>
                     </tr>
                     <{/foreach}>
@@ -62,8 +61,8 @@
     <table class='table table-bordered'>
         <thead>
         <tr class='head'>
-            <{foreach item=column from=$table_yaml.columns}>
-                <th class="center"><{$column}></th>
+            <{foreach item=field from=$table_yaml.fields}>
+                <th class="center"><{$field}></th>
             <{/foreach}>
         </tr>
         </thead>

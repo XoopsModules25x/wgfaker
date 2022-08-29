@@ -29,7 +29,7 @@ $moduleDirNameUpper = \mb_strtoupper($moduleDirName);
 // ------------------- Informations ------------------- //
 $modversion = [
     'name'                => \_MI_WGFAKER_NAME,
-    'version'             => '1.0.1',
+    'version'             => '1.0.2',
     'description'         => \_MI_WGFAKER_DESC,
     'author'              => 'Goffy - Wedega',
     'author_mail'         => 'webmaster@wedega.com',
@@ -78,11 +78,13 @@ $modversion['templates'] = [
     ['file' => 'wgfaker_admin_about.tpl', 'description' => '', 'type' => 'admin'],
     ['file' => 'wgfaker_admin_header.tpl', 'description' => '', 'type' => 'admin'],
     ['file' => 'wgfaker_admin_index.tpl', 'description' => '', 'type' => 'admin'],
-    ['file' => 'wgfaker_admin_field.tpl', 'description' => '', 'type' => 'admin'],
-    ['file' => 'wgfaker_admin_datatype.tpl', 'description' => '', 'type' => 'admin'],
-    ['file' => 'wgfaker_admin_table.tpl', 'description' => '', 'type' => 'admin'],
     ['file' => 'wgfaker_admin_clone.tpl', 'description' => '', 'type' => 'admin'],
     ['file' => 'wgfaker_admin_footer.tpl', 'description' => '', 'type' => 'admin'],
+    ['file' => 'wgfaker_admin_date.tpl', 'description' => '', 'type' => 'admin'],
+    ['file' => 'wgfaker_admin_datatype.tpl', 'description' => '', 'type' => 'admin'],
+    ['file' => 'wgfaker_admin_field.tpl', 'description' => '', 'type' => 'admin'],
+    ['file' => 'wgfaker_admin_table.tpl', 'description' => '', 'type' => 'admin'],
+
 ];
 // ------------------- Mysql ------------------- //
 $modversion['sqlfile']['mysql'] = 'sql/mysql.sql';
@@ -111,7 +113,7 @@ $modversion['config'][] = [
     'valuetype'   => 'int',
     'default'     => 50,
 ];
-// Number column
+// Number field
 $modversion['config'][] = [
     'name'        => 'numb_lines',
     'title'       => '\_MI_WGFAKER_NUMB_LINES',

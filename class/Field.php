@@ -82,15 +82,6 @@ class Field extends \XoopsObject
     }
 
     /**
-     * The new inserted $Id
-     * @return inserted id
-     */
-    public function getNewInsertedIdField()
-    {
-        return $GLOBALS['xoopsDB']->getInsertId();
-    }
-
-    /**
      * @public function getForm
      * @param bool $action
      * @return \XoopsThemeForm
@@ -330,21 +321,6 @@ class Field extends \XoopsObject
         $ret['datatype_text']  = $datatypeText;
         $ret['datecreated'] = \formatTimestamp($this->getVar('datecreated'), 's');
         $ret['submitter']   = \XoopsUser::getUnameFromId($this->getVar('submitter'));
-        return $ret;
-    }
-
-    /**
-     * Returns an array representation of the object
-     *
-     * @return array
-     */
-    public function toArrayField()
-    {
-        $ret = [];
-        $vars = $this->getVars();
-        foreach (\array_keys($vars) as $var) {
-            $ret[$var] = $this->getVar($var);
-        }
         return $ret;
     }
 }
