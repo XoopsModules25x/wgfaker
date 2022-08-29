@@ -37,6 +37,7 @@ $helper = \XoopsModules\Wgfaker\Helper::getInstance();
 $fieldHandler = $helper->getHandler('Field');
 $datatypeHandler = $helper->getHandler('Datatype');
 $tableHandler = $helper->getHandler('Table');
+$dateHandler = $helper->getHandler('Date');
 $myts = MyTextSanitizer::getInstance();
 // 
 if (!isset($xoopsTpl) || !\is_object($xoopsTpl)) {

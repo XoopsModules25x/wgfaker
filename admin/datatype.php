@@ -140,7 +140,7 @@ switch ($op) {
         $datatypeObj->setVar('submitter', Request::getInt('submitter'));
         // Insert Data
         if ($datatypeHandler->insert($datatypeObj)) {
-                \redirect_header('datatype.php?op=list&amp;start=' . $start . '&amp;limit=' . $limit, 2, \_AM_WGFAKER_FORM_OK);
+            \redirect_header('datatype.php?op=list&amp;start=' . $start . '&amp;limit=' . $limit, 2, \_AM_WGFAKER_FORM_OK);
         }
         // Get Form
         $GLOBALS['xoopsTpl']->assign('error', $datatypeObj->getHtmlErrors());

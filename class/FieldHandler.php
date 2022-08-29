@@ -108,13 +108,19 @@ class FieldHandler extends \XoopsPersistableObjectHandler
     }
 
 
-
+    /**
+     * @param $mid
+     * @param $tableid
+     * @param $table
+     * @param $overwrite
+     * @return void
+     */
     public function readFields($mid, $tableid, $table, $overwrite = false) {
         $helper = \XoopsModules\Wgfaker\Helper::getInstance();
         $fieldHandler = $helper->getHandler('Field');
         $datatypeHandler = $helper->getHandler('Datatype');
 
-        $sql    = 'SHOW COLUMNS FROM ' . $GLOBALS['xoopsDB']->prefix((string)$table);
+        $sql    = 'SHOW FIELDS FROM ' . $GLOBALS['xoopsDB']->prefix((string)$table);
         $result = $GLOBALS['xoopsDB']->queryf($sql);
 
         if (!$result instanceof \mysqli_result) {

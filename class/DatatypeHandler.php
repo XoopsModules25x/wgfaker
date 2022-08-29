@@ -135,7 +135,7 @@ class DatatypeHandler extends \XoopsPersistableObjectHandler
     public function getDatatype ($i, $field, $type) {
 
         $ret = Constants::DATATYPE_NONE;
-        // search for fixed column names
+        // search for fixed field names
         if (\in_array($field, ['submitter', 'uid'])) {
             $ret = Constants::DATATYPE_UID;
         }
@@ -146,7 +146,7 @@ class DatatypeHandler extends \XoopsPersistableObjectHandler
             $ret = Constants::DATATYPE_DATE;
         }
 
-        // if no match till now then check column type
+        // if no match till now then check field type
         if (0 == $ret) {
             if (\in_array($type, ['blob', 'text', 'mediumblob', 'mediumtext', 'longblob', 'longtext', 'enum', 'set'])) {
                 $ret = Constants::DATATYPE_LOREMIPSUM;

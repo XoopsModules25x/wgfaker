@@ -45,17 +45,22 @@ $adminmenu[] = [
     'icon' => 'assets/icons/32/field.png',
 ];
 $adminmenu[] = [
+    'title' => \_MI_WGFAKER_ADMENU5,
+    'link' => 'admin/date.php',
+    'icon' => 'assets/icons/32/date.png',
+];
+$adminmenu[] = [
     'title' => \_MI_WGFAKER_ADMENU4,
     'link' => 'admin/datatype.php',
     'icon' => 'assets/icons/32/datatype.png',
 ];
 $adminmenu[] = [
-    'title' => \_MI_WGFAKER_ADMENU5,
+    'title' => \_MI_WGFAKER_ADMENU20,
     'link' => 'admin/clone.php',
     'icon' => $sysPathIcon32.'/page_copy.png',
 ];
 $adminmenu[] = [
-    'title' => \_MI_WGFAKER_ADMENU6,
+    'title' => \_MI_WGFAKER_ADMENU21,
     'link' => 'admin/feedback.php',
     'icon' => $sysPathIcon32.'/mail_foward.png',
 ];

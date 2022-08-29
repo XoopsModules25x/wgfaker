@@ -30,11 +30,12 @@ require_once __DIR__ . '/common.php';
 \define('_MI_WGFAKER_DESC', 'This module generate faked test data and save them as yaml file');
 // ---------------- Admin Menu ----------------
 \define('_MI_WGFAKER_ADMENU1', 'Dashboard');
-\define('_MI_WGFAKER_ADMENU2', 'Table');
-\define('_MI_WGFAKER_ADMENU3', 'Field');
-\define('_MI_WGFAKER_ADMENU4', 'Datatype');
-\define('_MI_WGFAKER_ADMENU5', 'Clone');
-\define('_MI_WGFAKER_ADMENU6', 'Feedback');
+\define('_MI_WGFAKER_ADMENU2', 'Modules and tables');
+\define('_MI_WGFAKER_ADMENU3', 'Fields');
+\define('_MI_WGFAKER_ADMENU4', 'Datatypes');
+\define('_MI_WGFAKER_ADMENU5', 'Dates');
+\define('_MI_WGFAKER_ADMENU20', 'Clone');
+\define('_MI_WGFAKER_ADMENU21', 'Feedback');
 \define('_MI_WGFAKER_ABOUT', 'About');
 // ---------------- Admin Nav ----------------
 \define('_MI_WGFAKER_ADMIN_PAGER', 'Admin pager');

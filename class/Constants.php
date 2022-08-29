@@ -82,4 +82,9 @@ interface Constants
 
     //public const DATATYPE_ID_OF_MODULE  = 21;
 
+    // Constants for date
+    public const DATE_ONEMONTH = 1;
+    public const DATE_SIXMONTH = 2;
+    public const DATE_ONEYEAR  = 3;
+
 }
