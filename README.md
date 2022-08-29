@@ -46,14 +46,14 @@ Features:
 
 If you like the wgFaker module and thanks to the long process for giving the opportunity to the new module to be created in a moment, consider making a donation to <a href="https://xoops.org/modules/xdonations/" target="_blank" title="Donate to Xoops">Xoops.org</a>
 
-## wgEvents version 1.x
+## wgFaker version 1.x
 
-[![Build Status](https://scrutinizer-ci.com/g/ggoffy/wgevents/badges/build.png?b=master)](https://travis-ci.org/ggoffy/wgevents)
-[![Jenkins coverage](https://img.shields.io/jenkins/c/https/jenkins.qa.ubuntu.com/address-book-service-utopic-i386-ci.svg)](https://github.com/XoopsModules25x/wgevents)
+[![Build Status](https://scrutinizer-ci.com/g/ggoffy/wgfaker/badges/build.png?b=master)](https://travis-ci.org/ggoffy/wgfaker)
+[![Jenkins coverage](https://img.shields.io/jenkins/c/https/jenkins.qa.ubuntu.com/address-book-service-utopic-i386-ci.svg)](https://github.com/XoopsModules25x/wgfaker)
 [![Software License](https://img.shields.io/badge/license-GPL-brightgreen.svg?style=flat)](docs/license.txt)
-[![Quality Score](https://img.shields.io/scrutinizer/g/ggoffy/wgblocks.svg?style=flat)](https://scrutinizer-ci.com/g/ggoffy/wgevents)
-[![Gem](https://img.shields.io/gem/dt/rails.svg)](XoopsModules25x/wgevents)
-[![Latest Version](https://img.shields.io/github/release/XoopsModules25x/wgevents.svg?style=flat)](https://github.com/XoopsModules25x/wgevents/releases/latest)
+[![Quality Score](https://img.shields.io/scrutinizer/g/ggoffy/wgblocks.svg?style=flat)](https://scrutinizer-ci.com/g/ggoffy/wgfaker)
+[![Gem](https://img.shields.io/gem/dt/rails.svg)](XoopsModules25x/wgfaker)
+[![Latest Version](https://img.shields.io/github/release/XoopsModules25x/wgfaker.svg?style=flat)](https://github.com/XoopsModules25x/wgfaker/releases/latest)
 
 ## Require:
 - XOOPS 2.5.11;
@@ -66,7 +66,7 @@ If you like the wgFaker module and thanks to the long process for giving the opp
 **wgFaker is ready for PHP 8.0**
 
 ### Tutorial:
-see help section
+For detailed tutorial see help section in module.
 
 ### Translation:
 [![Translations on Transifex](https://xoops.org/images/translations-transifex-blue.svg)](https://www.transifex.com/xoops)
