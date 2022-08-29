@@ -3,7 +3,44 @@
 ![alt XOOPS CMS](https://xoops.org/images/logoXoopsPhp8.png)
 
 # wgFaker
-A XOOPS module for generation of faked test data and save them as yaml file.
+A XOOPS module for generation of faked test data.
+
+Features:
+- Read tables and fields
+- Based on field type the module makes a pre-selection of possible datatype (= output type)
+- You can change the datatype in order to get the data you wish
+  - examples of datatypes:
+    - autoincrement of table
+    - random integer
+    - random integer within defined range
+    - running integer, start with 1
+    - fixed defined number
+    - random float
+    - random text
+    - fixed defined text
+    - your defined text with running number
+    - random yes/no
+    - random firstname
+    - random lastname
+    - random email
+    - random date
+    - random date within defined range
+    - current date
+    - random uid of XOOPS users
+    - random IP4
+    - random IP6
+    - random phone number
+    - random country code
+    - random id of selected table
+    - random color
+    - random uuid
+    - random language
+    - random value of custom list
+- Generate test data according the (pre)settings
+- View test data as table or yaml
+- Copy test data into 'modules/{modulename}/testdata/{language}' and load them in module
+- Update date fields directly in the tables
+
 
 ## Support
 
