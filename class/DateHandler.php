@@ -60,7 +60,9 @@ class DateHandler extends \XoopsPersistableObjectHandler
 
     /**
      * @public function getForm
-     * @param bool $action
+     * @param int $mid
+     * @param int $tableid
+     * @param int $period
      * @return \XoopsThemeForm
      */
     public function getFormDate($mid = 0, $tableid = 0, $period = Constants::DATE_ONEYEAR)

@@ -91,7 +91,7 @@ class Generator
 
     /**
      * Render test data
-     * @return mixed
+     * @return float|int|string
      */
     public function renderer() {
         //reset ranges
