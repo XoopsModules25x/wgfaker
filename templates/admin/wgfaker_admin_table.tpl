@@ -29,7 +29,7 @@
                 <td class='center'><{$table.datecreated_text}></td>
                 <td class='center'><{$table.submitter_text}></td>
                 <td class="center  width5">
-                    <a href="column.php?op=list&amp;mid=<{$table.mid}>&amp;tableid=<{$table.id}>" title="<{$smarty.const._AM_WGFAKER_LIST_FIELD}>"><img src="<{$wgfaker_icons_url_16}>fields.png" alt="<{$smarty.const._AM_WGFAKER_LIST_FIELD}> table" ></a>
+                    <a href="field.php?op=list&amp;mid=<{$table.mid}>&amp;tableid=<{$table.id}>" title="<{$smarty.const._AM_WGFAKER_LIST_FIELD}>"><img src="<{$wgfaker_icons_url_16}>fields.png" alt="<{$smarty.const._AM_WGFAKER_LIST_FIELD}> table" ></a>
                     <a href="table.php?op=edit&amp;id=<{$table.id}>&amp;start=<{$start}>&amp;limit=<{$limit}>" title="<{$smarty.const._EDIT}>"><img src="<{xoModuleIcons16 edit.png}>" alt="<{$smarty.const._EDIT}> table" ></a>
                     <a href="table.php?op=delete&amp;id=<{$table.id}>" title="<{$smarty.const._DELETE}>"><img src="<{xoModuleIcons16 delete.png}>" alt="<{$smarty.const._DELETE}> table" ></a>
                 </td>

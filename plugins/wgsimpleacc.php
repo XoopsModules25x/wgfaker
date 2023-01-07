@@ -24,19 +24,19 @@ declare(strict_types=1);
 /**
  * plugin to correct inconsistant data, created by generator
  *
- * @return bool
+ * @return void
  */
 function wgfaker_plugin_wgsimpleacc ()
 {
     // correction 1: expenses should have only amount out
     $sql = 'UPDATE `' . $GLOBALS['xoopsDB']->prefix('wgsimpleacc_transactions') . "` SET `tra_amountin` = '0' WHERE `"  . $GLOBALS['xoopsDB']->prefix('wgsimpleacc_transactions') .  '`.`tra_class` = 2;';
-    if (!$result = $GLOBALS['xoopsDB']->queryF($sql)) {
+    if (!$GLOBALS['xoopsDB']->queryF($sql)) {
         \trigger_error($GLOBALS['xoopsDB']->error());
     }
 
     // correction 2: incomes should have only amount in
     $sql = 'UPDATE `' . $GLOBALS['xoopsDB']->prefix('wgsimpleacc_transactions') . "` SET `tra_amountout` = '0' WHERE `"  . $GLOBALS['xoopsDB']->prefix('wgsimpleacc_transactions') .  '`.`tra_class` = 3;';
-    if (!$result = $GLOBALS['xoopsDB']->queryF($sql)) {
+    if (!$GLOBALS['xoopsDB']->queryF($sql)) {
         \trigger_error($GLOBALS['xoopsDB']->error());
     }
 
@@ -57,7 +57,7 @@ function wgfaker_plugin_wgsimpleacc ()
         $counter = 0;
         while (false !== ($traId = $GLOBALS['xoopsDB']->fetchRow($result))) {
             $sql = 'UPDATE `' . $GLOBALS['xoopsDB']->prefix('wgsimpleacc_transactions') . "` SET `tra_date` = '" . $datesArr[$counter] . "', `tra_datecreated` = '" . $datesArr[$counter] . "' WHERE `"  . $GLOBALS['xoopsDB']->prefix('wgsimpleacc_transactions') .  '`.`tra_id` = ' . $traId[0] . ';';
-            if (!$resultUpdate = $GLOBALS['xoopsDB']->queryF($sql)) {
+            if (!$GLOBALS['xoopsDB']->queryF($sql)) {
                 \trigger_error($GLOBALS['xoopsDB']->error());
             }
             $counter++;
@@ -67,7 +67,7 @@ function wgfaker_plugin_wgsimpleacc ()
     }
     // incomes should be higher than expenses
     $sql = 'UPDATE `' . $GLOBALS['xoopsDB']->prefix('wgsimpleacc_transactions') . "` SET `tra_amountin` = `tra_amountin` * 1.2 WHERE `"  . $GLOBALS['xoopsDB']->prefix('wgsimpleacc_transactions') .  '`.`tra_class` = 3;';
-    if (!$result = $GLOBALS['xoopsDB']->queryF($sql)) {
+    if (!$GLOBALS['xoopsDB']->queryF($sql)) {
         \trigger_error($GLOBALS['xoopsDB']->error());
     }
 }
