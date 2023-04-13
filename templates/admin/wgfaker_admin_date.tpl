@@ -33,7 +33,7 @@
     </table>
 <{/if}>
 
-<{if $form|default:''}>
+<{if !empty($form)}>
     <{$form|default:false}>
     <script>
         function toogleFieldParams() {
@@ -91,7 +91,7 @@
 
     </script>
 <{/if}>
-<{if $error|default:''}>
+<{if !empty($error)}>
     <div class="errorMsg"><strong><{$error|default:false}></strong></div>
 <{/if}>
 <br><br>

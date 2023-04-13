@@ -36,7 +36,7 @@
                         <td class='center'><{$field.datecreated}></td>
                         <td class='center'><{$field.submitter}></td>
                         <td class="center  width5">
-                            <a href="field.php?op=edit&amp;id=<{$field.id}>&amp;mid=<{$table.mid}>&amp;tableid=<{$table.id}>" title="<{$smarty.const._EDIT}>"><img src="<{xoModuleIcons16 edit.png}>" alt="<{$smarty.const._EDIT}> field" ></a>
+                            <a href="field.php?op=edit&amp;id=<{$field.id}>&amp;mid=<{$table.mid}>&amp;tableid=<{$table.id}>" title="<{$smarty.const._EDIT}>"><img src="<{xoModuleIcons16 'edit.png'}>" alt="<{$smarty.const._EDIT}> field" ></a>
                         </td>
                     </tr>
                     <{/foreach}>
@@ -78,7 +78,7 @@
     </table>
 <{/if}>
 
-<{if $form|default:''}>
+<{if !empty($form)}>
     <{$form|default:false}>
     <script>
         function toogleFieldParams() {
@@ -136,7 +136,7 @@
 
     </script>
 <{/if}>
-<{if $error|default:''}>
+<{if !empty($error)}>
     <div class="errorMsg"><strong><{$error|default:false}></strong></div>
 <{/if}>
 <br><br>
