@@ -25,9 +25,9 @@
                 <td class='center'><{$datatype.datecreated_text}></td>
                 <td class='center'><{$datatype.submitter_text}></td>
                 <td class="center  width5">
-                    <a href="datatype.php?op=edit&amp;id=<{$datatype.id}>&amp;start=<{$start}>&amp;limit=<{$limit}>" title="<{$smarty.const._EDIT}>"><img src="<{xoModuleIcons16 edit.png}>" alt="<{$smarty.const._EDIT}> datatype" ></a>
-                    <a href="datatype.php?op=clone&amp;id_source=<{$datatype.id}>" title="<{$smarty.const._CLONE}>"><img src="<{xoModuleIcons16 editcopy.png}>" alt="<{$smarty.const._CLONE}> datatype" ></a>
-                    <a href="datatype.php?op=delete&amp;id=<{$datatype.id}>" title="<{$smarty.const._DELETE}>"><img src="<{xoModuleIcons16 delete.png}>" alt="<{$smarty.const._DELETE}> datatype" ></a>
+                    <a href="datatype.php?op=edit&amp;id=<{$datatype.id}>&amp;start=<{$start}>&amp;limit=<{$limit}>" title="<{$smarty.const._EDIT}>"><img src="<{xoModuleIcons16 'edit.png'}>" alt="<{$smarty.const._EDIT}> datatype" ></a>
+                    <a href="datatype.php?op=clone&amp;id_source=<{$datatype.id}>" title="<{$smarty.const._CLONE}>"><img src="<{xoModuleIcons16 'editcopy.png'}>" alt="<{$smarty.const._CLONE}> datatype" ></a>
+                    <a href="datatype.php?op=delete&amp;id=<{$datatype.id}>" title="<{$smarty.const._DELETE}>"><img src="<{xoModuleIcons16 'delete.png'}>" alt="<{$smarty.const._DELETE}> datatype" ></a>
                 </td>
             </tr>
             <{/foreach}>
@@ -35,15 +35,15 @@
         <{/if}>
     </table>
     <div class="clear">&nbsp;</div>
-    <{if $pagenav|default:''}>
+    <{if !empty($pagenav)}>
         <div class="xo-pagenav floatright"><{$pagenav|default:false}></div>
         <div class="clear spacer"></div>
     <{/if}>
 <{/if}>
-<{if $form|default:''}>
+<{if !empty($form)}>
     <{$form|default:false}>
 <{/if}>
-<{if $error|default:''}>
+<{if !empty($error)}>
     <div class="errorMsg"><strong><{$error|default:false}></strong></div>
 <{/if}>
 
