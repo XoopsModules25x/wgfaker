@@ -2,7 +2,19 @@
 
 ![alt XOOPS CMS](https://xoops.org/images/logoXoopsPhp8.png)
 
+## wgFaker version 1.x
+
+[![Build Status](https://scrutinizer-ci.com/g/ggoffy/wgfaker/badges/build.png?b=master)](https://travis-ci.org/ggoffy/wgfaker)
+[![Jenkins coverage](https://img.shields.io/jenkins/c/https/jenkins.qa.ubuntu.com/address-book-service-utopic-i386-ci.svg)](https://github.com/XoopsModules25x/wgfaker)
+[![Software License](https://img.shields.io/badge/license-GPL-brightgreen.svg?style=flat)](docs/license.txt)
+[![Quality Score](https://img.shields.io/scrutinizer/g/ggoffy/wgblocks.svg?style=flat)](https://scrutinizer-ci.com/g/ggoffy/wgfaker)
+[![Gem](https://img.shields.io/gem/dt/rails.svg)](XoopsModules25x/wgfaker)
+[![Latest Version](https://img.shields.io/github/release/XoopsModules25x/wgfaker.svg?style=flat)](https://github.com/XoopsModules25x/wgfaker/releases/latest)
+
 # wgFaker
+
+![module image](./assets/images/wgfaker.jpg)
+
 A XOOPS module for generation of faked test data.
 
 Features:
@@ -45,15 +57,6 @@ Features:
 ## Support
 
 If you like the wgFaker module and thanks to the long process for giving the opportunity to the new module to be created in a moment, consider making a donation to <a href="https://xoops.org/modules/xdonations/" target="_blank" title="Donate to Xoops">Xoops.org</a>
-
-## wgFaker version 1.x
-
-[![Build Status](https://scrutinizer-ci.com/g/ggoffy/wgfaker/badges/build.png?b=master)](https://travis-ci.org/ggoffy/wgfaker)
-[![Jenkins coverage](https://img.shields.io/jenkins/c/https/jenkins.qa.ubuntu.com/address-book-service-utopic-i386-ci.svg)](https://github.com/XoopsModules25x/wgfaker)
-[![Software License](https://img.shields.io/badge/license-GPL-brightgreen.svg?style=flat)](docs/license.txt)
-[![Quality Score](https://img.shields.io/scrutinizer/g/ggoffy/wgblocks.svg?style=flat)](https://scrutinizer-ci.com/g/ggoffy/wgfaker)
-[![Gem](https://img.shields.io/gem/dt/rails.svg)](XoopsModules25x/wgfaker)
-[![Latest Version](https://img.shields.io/github/release/XoopsModules25x/wgfaker.svg?style=flat)](https://github.com/XoopsModules25x/wgfaker/releases/latest)
 
 ## Require:
 - XOOPS 2.5.11;
