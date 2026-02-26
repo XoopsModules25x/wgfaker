@@ -6,7 +6,7 @@
 <{/if}>
 
 <{if $table_list|default:''}>
-    <table class='table table-bordered'>
+    <table class='outeer'>
         <thead>
             <tr class='head'>
                 <th class="center"><{$smarty.const._AM_WGFAKER_TABLE_ID}></th>

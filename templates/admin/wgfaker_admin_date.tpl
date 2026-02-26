@@ -13,7 +13,7 @@
 
 <{if $table_yaml|default:''}>
     <h3 class="head center" style="border-top:1px solid #ccc;margin-top:20px;padding:10px;"><{$table_yaml.name}></h3>
-    <table class='table table-bordered'>
+    <table class='outer'>
         <thead>
         <tr class='head'>
             <{foreach item=column from=$table_yaml.columns}>

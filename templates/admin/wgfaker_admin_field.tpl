@@ -9,7 +9,7 @@
     <{foreach item=table from=$table_list}>
         <h3 class="head center" style="border-top:1px solid #ccc;margin-top:20px;padding:10px;"><{$table.name}></h3>
         <{if $table.field_list|default:''}>
-            <table class='table table-bordered'>
+            <table class='outer'>
                 <thead>
                 <tr class='head'>
                     <th class="center"><{$smarty.const._AM_WGFAKER_FIELD_ID}></th>

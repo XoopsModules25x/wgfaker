@@ -2,7 +2,7 @@
 <{include file='db:wgfaker_admin_header.tpl' }>
 
 <{if $datatype_list|default:''}>
-    <table class='table table-bordered'>
+    <table class='outer'>
         <thead>
             <tr class='head'>
                 <th class="center"><{$smarty.const._AM_WGFAKER_DATATYPE_ID}></th>
